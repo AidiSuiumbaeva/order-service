@@ -1,0 +1,11 @@
+package kg.easy.orderservice.dao;
+
+import kg.easy.orderservice.models.entity.Phone;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PhoneRepository extends JpaRepository<Phone,Long> {
+
+    boolean existsPhoneByMsisdn(String msisdn);
+}
